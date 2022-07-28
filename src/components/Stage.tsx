@@ -1,13 +1,19 @@
 import React from 'react'
-import { Cell } from './Cell'
+import Cell from './Cell'
+import { StyledStage } from '../styles/Stage.style'
+import { TETROMINOS } from '../utils/setup'
 
-interface stageProps {
-    stage: string
+export type STAGECELL = [keyof typeof TETROMINOS, string]
+export type STAGE = STAGECELL[][]
+
+type Props = {
+  stage: STAGE
 }
 
-export const Stage: React.FC<stageProps> = ({ stage }) => {
-    return (
-        <Cell type='type' />
-    )
-}
+const Stage: React.FC<Props> = ({ stage }) => (
+  <StyledStage>
+    {stage.map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} /> ))}
+  </StyledStage>
+)
 
+export default Stage

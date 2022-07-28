@@ -1,12 +1,12 @@
 import React from 'react'
+import { StyledStartButton } from '../styles/StartButton.style'
 
-interface startButtonProps {
-    callback: string
+type Props = {
+  callback: () => void
 }
 
-export const StartButton: React.FC<startButtonProps> = ({ callback }) => {
-    return (
-        <div>Start</div>
-    )
-}
+const StartButton: React.FC<Props> = ({ callback }) => (
+  <StyledStartButton onClick={callback}>Start Game</StyledStartButton>
+)
 
+export default StartButton
