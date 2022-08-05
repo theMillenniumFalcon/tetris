@@ -1,5 +1,5 @@
 export const STAGE_WIDTH = 12
-export const STAGE_HEIGHT = 20
+export const STAGE_HEIGHT = 19
 export const ROWPOINTS = [40, 100, 300, 1200]
 
 export const TETROMINOS = {

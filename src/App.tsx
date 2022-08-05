@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStage } from './utils/helper';
-import { StyledTetrisWrapper, StyledTetris } from './App.styles';
+import { StyledTetrisWrapper, StyledTetris } from './styles/App.style';
 import Stage from './components/Stage';
 import Display from './components/Display';
 import StartButton from './components/StartButton';
