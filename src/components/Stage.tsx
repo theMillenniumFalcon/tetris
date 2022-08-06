@@ -3,7 +3,7 @@ import Cell from './Cell'
 import { StyledStage } from '../styles/Stage.style'
 import { TETROMINOS } from '../utils/setup'
 
-export type STAGECELL = [keyof typeof TETROMINOS, string]
+export type STAGECELL = [keyof typeof TETROMINOS | any, string]
 export type STAGE = STAGECELL[][]
 
 type Props = {
